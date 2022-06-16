@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="tags for website">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="theme-color" content="#ffffff">
+    <title> Haqqimizda </title>
+    
+    <!-- injector:css -->
+    <link rel="stylesheet" href="css/design.min.css">
+    <!-- endinjector -->
+    
+    <!-- injector:js -->
+    <script src="js/min/assets/jquery.min.js"></script>
+    <script src="js/min/assets/bootstrap.min.js"></script>
+    <script src="js/min/assets/owl.min.js"></script>
+    <script src="js/min/assets/jquery.fancybox.min.js"></script>
+    <script src="js/min/app.min.js"></script>
+    
+
+</head>
+<body>
+
+<header>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-menu">
+            <a class="navbar-brand logo" href="#">
+                <img src="https://crox.az/images/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse mobile-menu" id="navbarNavDropdown">
+                <ul class="navbar-nav m-auto">
+                    <li>
+                        <a href="http://example.com" class="hover-line">
+                            Biz kimik
+                        </a>
+                    </li>
+                    <li class="drop-menu">
+                        <a href="http://example.com">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="http://example.com">
+                                    Haqqımızda
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://example.com">
+                                    Haqqımızda
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="http://example.com" class="hover-line">
+                            Haqqımızda
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://example.com" class="hover-line">
+                            Elaqe
+                        </a>
+                    </li>
+                </ul>
+
+                <button class="btn btn-contact d-none-down-md" data-toggle="modal" data-target="#modal_login">
+                    Layihəm var
+                </button>
+
+                <div class="h-lang">
+
+                    <a href="javascript:void(0);" class="h-lang-link dropdownButton">
+                        az
+                        <i class="fa-light fa-angle-down"></i>
+                    </a>
+                    <ul class="h-lang-list dropdownMenu" style="display: none;">
+                        <li class="h-lang-item">
+                            <a href="javascript:void(0);">ru</a>
+                        </li>
+                        <li class="h-lang-item">
+                            <a href="javascript:void(0);">en</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<script>
+    var dropdownButton = $('.dropdownButton');
+    var dropdownMenu = $('.dropdownMenu');
+
+    // Button click
+    dropdownButton.on('click', function () {
+        var _this = $(this);
+
+        dropdownButton.not(_this).removeClass('active').siblings('.dropdownMenu').slideUp(300);
+        _this.toggleClass('active').siblings('.dropdownMenu').slideToggle(300);
+    });
+
+    // Click outside target
+    $(document).on('click touchstart', function(e) {
+        var target = e.target;
+
+        if (!$(target).is('.dropdownButton') && !$(target).parents('.dropdownButton').length > 0 && !$(target).parents('.dropdownMenu').length > 0) {
+            dropdownMenu.slideUp(300);
+            dropdownButton.removeClass('active');
+        }
+    });
+</script>
+
+
+
+<a href="tel:+994552590325" class="btn btn-call">Bizimle elaqe</a>
+
+
+
+<!-- Login -->
+<div class="modal fade modal-login" id="modal_login" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Layihem var</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="form form-contact">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Ad və soyadınız</label>
+                                <input type="text" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>E-mail:</label>
+                                <input type="text" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail:</label>
+                        <input type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Sualınız:</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                    <button class="btn btn-contact-form mt-2">gonder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="section-about">
+    <div class="container">
+        <h1 class="main-title">Biz nələr edirik?</h1>
+        <article>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab deserunt, enim ipsum iste pariatur placeat quia sed voluptate. Itaque, veniam?
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aliquam aliquid amet aperiam assumenda atque beatae blanditiis commodi cumque debitis deleniti dicta dignissimos dolore est, ex harum ipsam ipsum iusto magnam magni, modi molestiae natus necessitatibus, nulla obcaecati pariatur perferendis porro quas quasi quidem repellendus sint soluta unde veniam.</p>
+        </article>
+    </div>
+</div>
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Azərbaycan</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            Ümummilli lider
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Tarix
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Əhali
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Dövlət rəmzləri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Sənədlər</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            Ümummilli lider
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Tarix
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Əhali
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Dövlət rəmzləri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Yollar</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            Ümummilli lider
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Tarix
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Əhali
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Dövlət rəmzləri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Fəaliyyət</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            Ümummilli lider
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Tarix
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Əhali
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Dövlət rəmzləri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Baş səhifə səhifə
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Əlaqə</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            Qaynar xətt
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Ünvan və telefonlar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Qəbul günləri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Online müraciət
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="f-bottom">
+        © 2021 ABADA.AZ . Sayt <a href="">CROX GROUP</a> LLC tərəfindən hazırlanıb
+    </div>
+</footer>
+
+
+</body>
+</html>
